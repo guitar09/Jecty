@@ -1,7 +1,7 @@
 package com.dep.jecty
 
 import com.dep.jecty.core.JectyModule
-import com.dep.jecty.core.JectyProcessor
+import com.dep.jecty.core.JectyProcessor.checkTreeJecty
 import com.dep.jecty.core.JectyProcessor.getIns
 import com.dep.jecty.core.JectyProcessor.mockTest
 import com.dep.jecty.core.JectyProcessor.startInjection
@@ -17,7 +17,7 @@ object Jecty {
             startInjection(it)
         }
 
-        if (config.checkTree) JectyProcessor.checkTreeJecty()
+        if (config.checkTree) checkJectyTree()
     }
 
     inline fun <reified T> get(qualifier: String? = null): T {
@@ -26,6 +26,10 @@ object Jecty {
 
     inline fun <reified T> injectMockTest(mock: Any, qualifier: String? = null) {
         mockTest<T>(mock, qualifier)
+    }
+
+    fun checkJectyTree() {
+        checkTreeJecty()
     }
 
 

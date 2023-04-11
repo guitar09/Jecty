@@ -1,6 +1,7 @@
 package com.jecty
 
 import android.widget.TextView
+import com.dep.jecty.Jecty.checkJectyTree
 import com.dep.jecty.Jecty.injectMockTest
 import com.jecty.model.Api
 import com.jecty.ui.MainActivity
@@ -14,6 +15,10 @@ import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class MainActivityTest {
+    @Test
+    fun checkTree() {
+        checkJectyTree()
+    }
 
     @Test
     fun checkTest() {
