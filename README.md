@@ -23,7 +23,7 @@ object SessionJect : In(Session::class)
 
 Se necessário, você pode passar um qualifier como parâmetro:
 ```kotlin
-object SessionJect : In(Session::class< "seu_qualifier")
+object SessionJect : In(Session::class, "seu_qualifier")
 ```
 Após isso, é necessário configurar seu Module implementando a interface ```JectyModule``` e passando sua classe selada (sealed class) como parâmetro:
 ```kotlin
