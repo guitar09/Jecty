@@ -2,7 +2,7 @@
 
 Jecty é um dependence injection simples criado para fins de estudo.
 
-Para obter uma dependência, você precisa utilizar a função ```get()``` que pode aceitar um qualifier como parâmetro, por exemplo: ```get("mock)```.
+Para obter uma dependência, você precisa utilizar a função ```get()``` que pode aceitar um qualifier como parâmetro, por exemplo: ```get("mock")```.
 
 <h2>Configuração</h2>
 
